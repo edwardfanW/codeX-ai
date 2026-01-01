@@ -9,6 +9,15 @@ const fishProfiles = [
     image: "/images/guppy.svg"
   },
   {
+    name: "月光鱼",
+    latin: "Xiphophorus maculatus",
+    temperament: "活泼群居",
+    size: "4-6 cm",
+    water: "23-27°C, pH 7.0-8.0",
+    diet: "薄片饲料 + 冷冻水蚤",
+    image: "/images/platy.svg"
+  },
+  {
     name: "霓虹灯鱼",
     latin: "Paracheirodon innesi",
     temperament: "温和群游",
@@ -18,6 +27,15 @@ const fishProfiles = [
     image: "/images/neon-tetra.svg"
   },
   {
+    name: "斑马鱼",
+    latin: "Danio rerio",
+    temperament: "活跃群游",
+    size: "4-5 cm",
+    water: "22-26°C, pH 6.5-7.5",
+    diet: "细颗粒 + 活饵",
+    image: "/images/zebra-danio.svg"
+  },
+  {
     name: "熊猫鼠",
     latin: "Corydoras panda",
     temperament: "底栖温和",
@@ -25,6 +43,15 @@ const fishProfiles = [
     water: "22-25°C, pH 6.4-7.2",
     diet: "沉底饲料 + 冷冻红虫",
     image: "/images/panda-corydoras.svg"
+  },
+  {
+    name: "玛丽鱼",
+    latin: "Poecilia sphenops",
+    temperament: "温和群居",
+    size: "5-7 cm",
+    water: "24-28°C, pH 7.0-8.0",
+    diet: "素食型薄片 + 螺旋藻",
+    image: "/images/molly.svg"
   },
   {
     name: "斗鱼",
@@ -74,41 +101,44 @@ const careTips = [
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen">
-      <section className="bg-gradient-to-br from-aquarium-blue via-sky-900 to-slate-900 text-white">
-        <div className="mx-auto flex w-full max-w-6xl flex-col gap-6 px-6 py-16 lg:flex-row lg:items-center lg:justify-between">
+    <main className="min-h-screen bg-slate-950 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#0b1f3a] via-[#0f4c81] to-[#0b1220] text-white">
+        <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(56,189,248,0.35),_transparent_55%)]" />
+        <div className="pointer-events-none absolute -right-32 top-16 h-80 w-80 rounded-full bg-cyan-400/20 blur-3xl" />
+        <div className="pointer-events-none absolute -left-20 bottom-0 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl" />
+        <div className="relative mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 py-20 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-xl space-y-6">
-            <p className="text-sm uppercase tracking-[0.3em] text-sky-200">
+            <p className="text-xs uppercase tracking-[0.4em] text-cyan-200">
               家庭水族入门
             </p>
             <h1 className="text-4xl font-semibold leading-tight sm:text-5xl">
               观赏鱼指南 · 家庭饲养图鉴
             </h1>
-            <p className="text-base text-sky-100 sm:text-lg">
+            <p className="text-base text-cyan-100/90 sm:text-lg">
               精选适合家庭饲养的观赏鱼，搭配关键水质指标与日常养护要点，
               帮你快速搭建稳定又好看的小型水族生态。
             </p>
-            <div className="flex flex-wrap gap-3 text-sm text-sky-100">
-              <span className="rounded-full border border-sky-300/30 px-4 py-2">
+            <div className="flex flex-wrap gap-3 text-sm text-cyan-100">
+              <span className="rounded-full border border-cyan-300/30 bg-white/5 px-4 py-2">
                 低维护
               </span>
-              <span className="rounded-full border border-sky-300/30 px-4 py-2">
+              <span className="rounded-full border border-cyan-300/30 bg-white/5 px-4 py-2">
                 适合新手
               </span>
-              <span className="rounded-full border border-sky-300/30 px-4 py-2">
+              <span className="rounded-full border border-cyan-300/30 bg-white/5 px-4 py-2">
                 小型水族缸
               </span>
             </div>
           </div>
-          <div className="relative h-64 w-full max-w-md rounded-3xl bg-white/10 p-6 shadow-2xl backdrop-blur">
-            <div className="absolute inset-4 rounded-2xl border border-white/20" />
+          <div className="relative h-72 w-full max-w-md rounded-3xl border border-white/15 bg-white/10 p-6 shadow-2xl backdrop-blur">
+            <div className="absolute inset-4 rounded-2xl border border-white/10" />
             <div className="relative z-10 flex h-full flex-col justify-between">
               <div className="space-y-2">
-                <p className="text-xs uppercase tracking-[0.3em] text-sky-200">
+                <p className="text-xs uppercase tracking-[0.3em] text-cyan-200">
                   今日推荐
                 </p>
                 <h2 className="text-2xl font-semibold">混养组合</h2>
-                <p className="text-sm text-sky-100">
+                <p className="text-sm text-cyan-100/90">
                   霓虹灯鱼 + 熊猫鼠 + 孔雀鱼，颜色丰富且性格温和。
                 </p>
               </div>
@@ -119,7 +149,7 @@ export default function HomePage() {
                   width={140}
                   height={100}
                 />
-                <div className="text-sm text-sky-100">
+                <div className="text-sm text-cyan-100/90">
                   <p>建议水量</p>
                   <p className="text-lg font-semibold text-white">40-60 L</p>
                 </div>
@@ -129,16 +159,17 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
-        <div className="flex items-end justify-between gap-6">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16 text-slate-900">
+        <div className="rounded-[32px] border border-white/40 bg-white p-10 shadow-[0_20px_60px_rgba(15,23,42,0.2)]">
+          <div className="flex items-end justify-between gap-6">
           <div>
-            <h2 className="text-3xl font-semibold">家庭适养观赏鱼图鉴</h2>
+            <h2 className="text-3xl font-semibold text-slate-900">家庭适养观赏鱼图鉴</h2>
             <p className="mt-3 text-slate-600">
               选择性格温和、对水质要求相对稳定的品种，适合家庭缸初学者。
             </p>
           </div>
           <span className="hidden rounded-full bg-sand px-4 py-2 text-sm text-slate-700 md:inline-block">
-            共 4 种推荐
+            共 {fishProfiles.length} 种推荐
           </span>
         </div>
 
@@ -146,7 +177,7 @@ export default function HomePage() {
           {fishProfiles.map((fish) => (
             <article
               key={fish.name}
-              className="group flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-lg"
+              className="group flex flex-col gap-4 rounded-3xl border border-slate-200 bg-white p-6 shadow-sm transition hover:-translate-y-1 hover:shadow-[0_16px_40px_rgba(15,23,42,0.12)]"
             >
               <div className="flex items-center justify-between">
                 <div>
@@ -192,9 +223,10 @@ export default function HomePage() {
             </article>
           ))}
         </div>
+        </div>
       </section>
 
-      <section className="bg-slate-900 py-16 text-white">
+      <section className="bg-gradient-to-r from-slate-950 via-slate-900 to-slate-950 py-16 text-white">
         <div className="mx-auto flex w-full max-w-6xl flex-col gap-10 px-6 lg:flex-row">
           <div className="flex-1">
             <h2 className="text-3xl font-semibold">基础设备清单</h2>
@@ -205,7 +237,7 @@ export default function HomePage() {
               {equipmentList.map((item) => (
                 <div
                   key={item.title}
-                  className="rounded-2xl border border-white/10 bg-white/5 p-5"
+                  className="rounded-2xl border border-white/10 bg-white/5 p-5 shadow-[0_12px_30px_rgba(15,23,42,0.2)]"
                 >
                   <h3 className="text-lg font-semibold">{item.title}</h3>
                   <p className="mt-2 text-sm text-slate-300">{item.detail}</p>
@@ -223,7 +255,7 @@ export default function HomePage() {
               {waterTargets.map((target) => (
                 <div
                   key={target.label}
-                  className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4"
+                  className="flex items-center justify-between rounded-2xl border border-white/10 bg-white/5 px-5 py-4 shadow-[0_12px_30px_rgba(15,23,42,0.2)]"
                 >
                   <span className="text-sm uppercase tracking-[0.2em] text-slate-400">
                     {target.label}
@@ -238,7 +270,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="mx-auto w-full max-w-6xl px-6 py-16">
+      <section className="mx-auto w-full max-w-6xl px-6 py-16 text-slate-900">
         <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
           <div>
             <h2 className="text-3xl font-semibold">日常养护要点</h2>
@@ -249,7 +281,7 @@ export default function HomePage() {
               {careTips.map((tip) => (
                 <li
                   key={tip}
-                  className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5"
+                  className="flex items-start gap-4 rounded-2xl border border-slate-200 bg-white p-5 shadow-[0_16px_40px_rgba(15,23,42,0.08)]"
                 >
                   <span className="mt-1 flex h-8 w-8 items-center justify-center rounded-full bg-aquarium-teal text-white">
                     ✓
@@ -259,7 +291,7 @@ export default function HomePage() {
               ))}
             </ul>
           </div>
-          <aside className="rounded-3xl border border-slate-200 bg-sand p-8">
+          <aside className="rounded-3xl border border-slate-200 bg-gradient-to-br from-sand to-white p-8 shadow-[0_20px_40px_rgba(15,23,42,0.12)]">
             <h3 className="text-2xl font-semibold text-slate-800">每日 3 件事</h3>
             <p className="mt-3 text-sm text-slate-700">
               让养鱼变得简单的日常检查流程。
@@ -279,12 +311,12 @@ export default function HomePage() {
         </div>
       </section>
 
-      <footer className="border-t border-slate-200 bg-white">
-        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 py-8 sm:flex-row sm:items-center">
-          <p className="text-sm text-slate-500">
+      <footer className="border-t border-slate-800/60 bg-slate-950">
+        <div className="mx-auto flex w-full max-w-6xl flex-col items-start justify-between gap-4 px-6 py-8 text-slate-400 sm:flex-row sm:items-center">
+          <p className="text-sm text-slate-400">
             M1 可运行版本 · 观赏鱼指南
           </p>
-          <p className="text-sm text-slate-500">
+          <p className="text-sm text-slate-400">
             下一步：完善品种库与水族笔记功能
           </p>
         </div>
