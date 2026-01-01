@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const fishProfiles = [
   {
     name: "孔雀鱼",
@@ -115,7 +113,7 @@ export default function HomePage() {
                 </p>
               </div>
               <div className="flex items-center gap-4">
-                <Image
+                <img
                   src="/images/scene.svg"
                   alt="家庭水族缸示意插图"
                   width={140}
@@ -156,7 +154,7 @@ export default function HomePage() {
                   <p className="text-sm text-slate-500 italic">{fish.latin}</p>
                 </div>
                 <div className="h-16 w-24 rounded-2xl bg-slate-50 p-3">
-                  <Image
+                  <img
                     src={fish.image}
                     alt={`${fish.name} 插图`}
                     width={72}
